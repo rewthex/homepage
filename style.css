@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,6 +10,8 @@
 	margin: 0;
 }
 body {
+	background: whitesmoke;
+	font-family: 'roboto', serif;
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
 }
@@ -49,6 +53,128 @@ h6 {
 	isolation: isolate;
 }
 
+:root {
+	--shadow-color: 0deg 0% 40%;
+	--shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+		0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+		2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+		5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
 .container {
-  
+	display: flex;
+	flex-direction: column;
+	gap: 6em;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	padding: 2em;
+}
+
+.header::after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: #DC8686;
+	z-index: -1;
+	clip-path: polygon(0 0, 100% 0, 100% 43%, 0% 100%);
+}
+
+.header-photo {
+	min-width: 400px;
+}
+
+img {
+	box-shadow: var(--shadow-elevation-medium);
+}
+
+.header-text {
+	box-shadow: var(--shadow-elevation-medium);
+	background: white;
+	align-self: center;
+	padding: 2em;
+}
+
+.header-text > h1 {
+	font-size: 1.5rem;
+}
+
+.header-text > p {
+	font-size: 1rem;
+	font-weight: 300;
+	letter-spacing: 0.1em;
+	word-spacing: 0.1em;
+}
+
+.portfolio {
+	padding: 2em;
+}
+
+.projects {
+	display: flex;
+	justify-content: center;
+	gap: 2.5rem;
+	flex-wrap: wrap;
+}
+
+.project {
+	display: grid;
+	grid-template-rows: 1.7fr 1fr;
+	grid-template-areas:
+		'project-picture'
+		'project-description';
+  max-width: 250px;
+	min-height: 300px;
+	box-shadow: var(--shadow-elevation-medium);
+}
+
+.project-picture {
+  color: rgb(136, 136, 136);
+	padding: 1.5em;
+  text-align: center;
+  align-content: center;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.project-picture-one {
+	background: #f8edeb;
+}
+
+.project-picture-two {
+	background: #fec89a;
+}
+
+.project-picture-three {
+	background: #fcd5ce;
+}
+
+.project-picture-four {
+	background: #ffdab9;
+}
+
+.project-picture-five {
+	background: #f49595;
+}
+
+.project-picture-six {
+	background: #f1cebe;
+}
+
+.contact {
+	display: flex;
+	padding: 2rem;
+	background: #f49595;
+}
+
+a {
+	display: block;
 }

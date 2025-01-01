@@ -4,36 +4,112 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Homepage</title>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<main class="container">
 			<section class="header">
-				<picture class="portrait">
-					<source
-						srcset="./images/programmer-300.jpg"
-						media="(max-width: 480px)"
-					/>
-					<source
-						srcset="./images/programmer-600.jpg"
-						media="(max-width: 768px)"
-					/>
-					<img
-						src="./images/programmer-1000.jpg"
-						alt="Programmer working on code"
-					/>
-				</picture>
-				<section class="about">
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-					aliquip ex ea commodo consequat. Duis aute irure dolor in
-					reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-					pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-					culpa qui officia deserunt mollit anim id est laborum."
+				<div class="header-photo">
+					<picture>
+						<source
+							srcset="./images/programmer-300.jpg"
+							media="(max-width: 480px)"
+						/>
+						<source
+							srcset="./images/programmer-600.jpg"
+							media="(max-width: 768px)"
+						/>
+						<img
+							src="./images/programmer-1000.jpg"
+							alt="Programmer working on code"
+						/>
+					</picture>
+				</div>
+				<section class="header-text">
+					<h1>About me</h1>
+					<p>
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+						aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+						culpa qui officia deserunt mollit anim id est laborum."
+					</p>
+					<div class="contact-icons"></div>
 				</section>
 			</section>
-			<section class="portfolio"></section>
-			<section class="contact"></section>
+			<section class="portfolio">
+				<h1>My Portfolio</h1>
+				<div class="projects">
+					<div class="project project-one">
+						<div class="project-picture project-picture-one">
+							screenshot of picture
+						</div>
+						<div class="project-description"></div>
+					</div>
+					<div class="project project-two">
+						<div class="project-picture project-picture-two">screenshot of picture</div>
+						<div class="project-description"></div>
+					</div>
+					<div class="project project-three">
+						<div class="project-picture project-picture-three">
+							screenshot of picture
+						</div>
+						<div class="project-description"></div>
+					</div>
+					<div class="project project-four">
+						<div class="project-picture project-picture-four">
+							screenshot of picture
+						</div>
+						<div class="project-description"></div>
+					</div>
+					<div class="project project-five">
+						<div class="project-picture project-picture-five">
+							screenshot of picture
+						</div>
+						<div class="project-description"></div>
+					</div>
+					<div class="project project-six">
+						<div class="project-picture project-picture-six">
+							screenshot of picture
+						</div>
+						<div class="project-description"></div>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+				<div class="contact-info">
+					<h1>Contact me</h1>
+					<p>
+						Please get in touch if you think our work could be mutually
+						beneficial!
+					</p>
+					<address>
+						<p>1234 Random Road</p>
+						<p>Random Town, California 12345</p>
+						<p>
+							<a href="tel:+15555555555">555-555-5555</a>
+							<a href="mailto:arnoldschwarz@gmail.com"
+								>arnoldschwarz@gmail.com</a
+							>
+						</p>
+					</address>
+				</div>
+				<div class="contact-photo">
+					<picture>
+						<source
+							srcset="./images/contact-300.jpg"
+							media="(max-width: 480px)"
+						/>
+						<source
+							srcset="./images/contact-600.jpg"
+							media="(max-width: 768px)"
+						/>
+						<img src="./images/contact-1000.jpg" alt="Programmer in thought" />
+					</picture>
+				</div>
+			</section>
 		</main>
 	</body>
 </html>
