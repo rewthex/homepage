@@ -82,46 +82,66 @@ h6 {
 	top: 0;
 	left: 0;
 	position: absolute;
-	background: #DC8686;
+	background: #dc8686;
 	z-index: -1;
 	clip-path: polygon(0 0, 100% 0, 100% 43%, 0% 100%);
 }
 
 .header-photo {
 	min-width: 400px;
+	max-width: 750px;
+
 }
 
 img {
 	box-shadow: var(--shadow-elevation-medium);
+	min-width: 400px;
+	max-width: 750px;
 }
 
 .header-text {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	padding: 2em;
 	box-shadow: var(--shadow-elevation-medium);
 	background: white;
 	align-self: center;
-	padding: 2em;
+	
 }
 
 .header-text > h1 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
+	font-weight: 300;
 }
 
 .header-text > p {
-	font-size: 1rem;
+	font-size: 1em;
 	font-weight: 300;
 	letter-spacing: 0.1em;
 	word-spacing: 0.1em;
+}
+
+.contact-icons {
+	display: flex;
+	font-size: 1.5rem;
+	gap: 0.5em;
+	justify-content: end;
 }
 
 .portfolio {
 	padding: 2em;
 }
 
+.portfolio > h1 {
+	font-weight: 300;
+	margin-bottom: 1em;
+}
+
 .projects {
-	display: flex;
-	justify-content: center;
-	gap: 2.5rem;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+	gap: 2rem;
 }
 
 .project {
@@ -130,51 +150,111 @@ img {
 	grid-template-areas:
 		'project-picture'
 		'project-description';
-  max-width: 250px;
+	max-width: 300px;
 	min-height: 300px;
+	font-size: 0.8rem;
+	font-weight: 300;
 	box-shadow: var(--shadow-elevation-medium);
 }
 
 .project-picture {
-  color: rgb(136, 136, 136);
-	padding: 1.5em;
-  text-align: center;
-  align-content: center;
-  font-weight: 400;
-  font-style: italic;
-  font-size: 1.5rem;
+	min-height: 200px;
 }
 
-.project-picture-one {
+.project:nth-of-type(1) .project-picture {
 	background: #f8edeb;
 }
 
-.project-picture-two {
+.project:nth-of-type(2) .project-picture {
 	background: #fec89a;
 }
 
-.project-picture-three {
+.project:nth-of-type(3) .project-picture {
 	background: #fcd5ce;
 }
 
-.project-picture-four {
+.project:nth-of-type(4) .project-picture {
 	background: #ffdab9;
 }
 
-.project-picture-five {
+.project:nth-of-type(5) .project-picture {
 	background: #f49595;
 }
 
-.project-picture-six {
+.project:nth-of-type(6) .project-picture {
 	background: #f1cebe;
+}
+
+.project-description {
+	display: flex;
+	flex-direction: column;
+	gap: 0.7em;
+	padding: 1em;
+}
+
+.project-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.project-title > h3 {
+	font-weight: 400;
+}
+
+.project-icons {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.github-icon {
+	display: inline-block;
+	background: url('./images/github.svg');
+
+}
+
+.external-icon {
+	display: inline-block;
+	background: url('./images/external.svg');
+
+}
+
+.github-icon, .external-icon {
+	width: 1.5em;
+  height: 1.5em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.project-description {
+	font-size: 0.8rem;
+	font-weight: 300;
 }
 
 .contact {
 	display: flex;
-	padding: 2rem;
+	justify-content: space-between;
+	gap: 2em;
+	padding: 2em;
+	color: white;
 	background: #f49595;
+}
+
+.contact-info {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 2em;
+}
+
+address {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
 }
 
 a {
 	display: block;
+	color: white;
+	text-decoration: none;
 }
