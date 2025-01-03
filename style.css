@@ -75,6 +75,8 @@ h6 {
 	position: relative;
 	padding: 2em;
 	overflow: visible;
+	filter: drop-shadow(0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.253));
+
 }
 
 .header::after {
@@ -97,7 +99,7 @@ h6 {
 }
 
 img {
-	box-shadow: var(--shadow-elevation-medium);
+	filter: drop-shadow(0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.253));
 }
 
 .header-text {
