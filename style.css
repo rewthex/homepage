@@ -65,49 +65,50 @@ h6 {
 	display: flex;
 	flex-direction: column;
 	gap: 6em;
+	margin: 0 auto;
 }
 
 .header {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap: 1em;
 	position: relative;
 	padding: 2em;
+	overflow: visible;
 }
 
 .header::after {
 	content: '';
+	position: absolute;
 	display: block;
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
-	position: absolute;
-	background: #dc8686;
-	z-index: -1;
-	clip-path: polygon(0 0, 100% 0, 100% 43%, 0% 100%);
+	background: #cf7171;
+	z-index: -2;
+	clip-path: polygon(0 0, 100% 0, 100% 37%, 0% 100%);
 }
 
 .header-photo {
-	min-width: 400px;
-	max-width: 750px;
-
+	position: relative;
+	display: inline-block;
+	max-width: 900px;
 }
 
 img {
 	box-shadow: var(--shadow-elevation-medium);
-	min-width: 400px;
-	max-width: 750px;
 }
 
 .header-text {
 	display: flex;
 	flex-direction: column;
-	gap: 2em;
+	z-index: 1;
+	gap: 1.25em;
 	padding: 2em;
 	box-shadow: var(--shadow-elevation-medium);
 	background: white;
 	align-self: center;
-	
 }
 
 .header-text > h1 {
@@ -140,7 +141,8 @@ img {
 
 .projects {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(170px, 320px));
 	gap: 2rem;
 }
 
@@ -150,15 +152,9 @@ img {
 	grid-template-areas:
 		'project-picture'
 		'project-description';
-	max-width: 300px;
-	min-height: 300px;
 	font-size: 0.8rem;
 	font-weight: 300;
 	box-shadow: var(--shadow-elevation-medium);
-}
-
-.project-picture {
-	min-height: 200px;
 }
 
 .project:nth-of-type(1) .project-picture {
@@ -208,22 +204,42 @@ img {
 }
 
 .github-icon {
-	display: inline-block;
 	background: url('./images/github.svg');
-
 }
 
 .external-icon {
-	display: inline-block;
 	background: url('./images/external.svg');
-
 }
 
-.github-icon, .external-icon {
+.linkedin-icon {
+	background: url('./images/linkedin.svg');
+}
+
+.twitter-icon {
+	background: url('./images/twitter.svg');
+	stroke: white;
+}
+
+.phone-icon {
+	background: url('./images/phone.svg');
+}
+
+.email-icon {
+	background: url('./images/email.svg');
+	stroke: white;
+}
+
+.github-icon,
+.external-icon,
+.linkedin-icon,
+.twitter-icon,
+.phone-icon,
+.email-icon {
+	display: inline-block;
 	width: 1.5em;
-  height: 1.5em;
-  background-size: contain;
-  background-repeat: no-repeat;
+	height: 1.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .project-description {
@@ -233,10 +249,9 @@ img {
 
 .contact {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	gap: 2em;
 	padding: 2em;
-	color: white;
 	background: #f49595;
 }
 
@@ -244,7 +259,13 @@ img {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	gap: 2em;
+	gap: 1em;
+}
+
+.contact-icons-lower {
+	display: flex;
+	justify-content: end;
+	gap: 0.5em;
 }
 
 address {
@@ -254,7 +275,41 @@ address {
 }
 
 a {
-	display: block;
-	color: white;
+	display: flex;
+	gap: 0.5em;
+	color: black;
 	text-decoration: none;
+}
+
+.phone-icon, .email-icon {
+	align-self: center;
+}
+
+@media (max-width: 1200px) {
+	.header {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header-photo {
+		align-self: center;
+	}
+
+	.contact-photo {
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 700px) {
+	.header-text {
+		opacity: 0.9;
+	}
+
+	.contact {
+		display: flex;
+		flex-direction: column;
+	}
+	.contact-photo {
+		align-self: center;
+	}
 }
