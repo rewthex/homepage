@@ -291,6 +291,9 @@ a {
 	align-self: center;
 }
 
+.contact-photo {
+	align-self: center;
+}
 @media (max-width: 1200px) {
 	.header {
 		display: flex;
